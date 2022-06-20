@@ -4,3 +4,16 @@
 4.	SELECT * FROM orders LIMIT 100;
 5.	select * from customers where PostalCode REGEXP '1010|3012|12209|05023';
 6.	select * from orders where ShipRegion IS NOT NULL;
+7.	select * from customers order by Country, city;
+8.	insert into customers (CustomerID, CompanyName, ContactName,ContactTitle,Address, City, Region, PostalCode,Country,Phone,Fax,Image,ImageThumbnail) values ('MOON', 'toTheMoon', 'Megan Coats','Student','Somewhere 72727','SomeCity', 'SomeRegion', '55555','SomeCountry','0555-55555','0555-55655',NULL,NULL);
+9.	UPDATE orders SET ShipRegion ='EuroZone' WHERE ShipCountry ='France'
+10.	SELECT MIN(quantity), MAX(quantity), AVG(quantity) FROM orderdetails;
+11.	SELECT MIN(quantity), MAX(quantity), AVG(quantity) FROM orderdetails GROUP BY orderid;
+12.	SELECT customer_id FROM orders WHERE order id=10290;
+13.	SELECT * FROM orders JOIN Customers ON orders.customerid=Customers.id;
+14.	SELECT * FROM orders LEFT JOIN Customers ON orders.customerid=Customers.id;
+15.	SELECT * FROM orders RIGHT JOIN Customers ON orders.customerid=Customers.id;
+16.	SELECT * FROM orders JOIN employees ON orders.employeeid=employees.id WHERE city='London';
+17.	SELECT shipname FROM orders JOIN orderdetails ON orders.id=orderdetails.orderid JOIN products ON orderdetails.productid=products.id WHERE discontinued=1;\
+18.	SELECT firstname FROM employees WHERE reportsto IS NULL;
+19.	SELECT firstname FROM employees WHERE reportsto='Andrew'
